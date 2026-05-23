@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resenha Never Dies</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Navegacao principal">
+        <a class="brand" href="#topo" aria-label="Resenha Never Dies">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Resenha Never Dies</span>
+        </a>
+        <div class="nav-links">
+          <a href="#postar">Postar</a>
+          <a href="#galeria">Galeria</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="topo">
+      <section class="hero" aria-labelledby="titulo">
+        <div class="hero-art" aria-hidden="true">
+          <span class="block grass"></span>
+          <span class="block stone"></span>
+          <span class="block dirt"></span>
+          <span class="torch"></span>
+          <span class="pickaxe"></span>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Servidor, prints e resenha</p>
+          <h1 id="titulo">Resenha never dies</h1>
+          <p>
+            Um mural estilo Minecraft para guardar as melhores imagens da tropa,
+            com upload direto pelo navegador.
+          </p>
+          <a class="primary-action" href="#postar">Postar imagem</a>
+        </div>
+      </section>
+
+      <section class="upload-section" id="postar" aria-labelledby="postar-titulo">
+        <div class="section-heading">
+          <p class="eyebrow">Novo post</p>
+          <h2 id="postar-titulo">Adicionar imagem</h2>
+        </div>
+
+        <form class="upload-form" id="uploadForm">
+          <label class="drop-zone" for="imageInput">
+            <input id="imageInput" name="image" type="file" accept="image/*" required>
+            <span class="drop-icon" aria-hidden="true"></span>
+            <strong>Escolha uma imagem</strong>
+            <span>PNG, JPG, GIF ou WEBP</span>
+          </label>
+
+          <div class="form-fields">
+            <label for="captionInput">Legenda</label>
+            <input
+              id="captionInput"
+              name="caption"
+              type="text"
+              maxlength="80"
+              placeholder="Ex: print lendario da base"
+            >
+
+            <div class="preview" id="preview" hidden>
+              <img id="previewImage" alt="Previa da imagem selecionada">
+            </div>
+
+            <button class="submit-button" type="submit">Publicar no site</button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+
+      <section class="gallery-section" id="galeria" aria-labelledby="galeria-titulo">
+        <div class="section-heading">
+          <p class="eyebrow">Galeria</p>
+          <h2 id="galeria-titulo">Posts da comunidade</h2>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"></div>
+        <p class="empty-state" id="emptyState">
+          Nenhuma imagem postada ainda. Seja o primeiro a eternizar a resenha.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Site desenvolvido por <strong>JhonWolfKing</strong>.</p>
+      <p class="disclaimer">Projeto de fa, nao oficial da Mojang ou Microsoft.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
