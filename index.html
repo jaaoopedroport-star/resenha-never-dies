@@ -14,7 +14,7 @@
           <span>Resenha Never Dies</span>
         </a>
         <div class="nav-links">
-          <a href="#postar">Postar</a>
+          <a href="#postar">Como postar</a>
           <a href="#galeria">Galeria</a>
         </div>
       </nav>
@@ -35,44 +35,31 @@
           <h1 id="titulo">Resenha never dies</h1>
           <p>
             Um mural estilo Minecraft para guardar as melhores imagens da tropa,
-            com upload direto pelo navegador.
+            publicado direto pelo GitHub Pages.
           </p>
-          <a class="primary-action" href="#postar">Postar imagem</a>
+          <a class="primary-action" href="#postar">Ver como postar</a>
         </div>
       </section>
 
-      <section class="upload-section" id="postar" aria-labelledby="postar-titulo">
+      <section class="manual-section" id="postar" aria-labelledby="postar-titulo">
         <div class="section-heading">
-          <p class="eyebrow">Novo post</p>
-          <h2 id="postar-titulo">Adicionar imagem</h2>
+          <p class="eyebrow">Posts publicos</p>
+          <h2 id="postar-titulo">Como adicionar imagem</h2>
         </div>
 
-        <form class="upload-form" id="uploadForm">
-          <label class="drop-zone" for="imageInput">
-            <input id="imageInput" name="image" type="file" accept="image/*" required>
-            <span class="drop-icon" aria-hidden="true"></span>
-            <strong>Escolha uma imagem</strong>
-            <span>PNG, JPG, GIF ou WEBP</span>
-          </label>
-
-          <div class="form-fields">
-            <label for="captionInput">Legenda</label>
-            <input
-              id="captionInput"
-              name="caption"
-              type="text"
-              maxlength="80"
-              placeholder="Ex: print lendario da base"
-            >
-
-            <div class="preview" id="preview" hidden>
-              <img id="previewImage" alt="Previa da imagem selecionada">
-            </div>
-
-            <button class="submit-button" type="submit">Publicar no site</button>
-            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        <div class="manual-panel">
+          <div class="manual-icon" aria-hidden="true"></div>
+          <div>
+            <ol class="steps-list">
+              <li>Envie a imagem para a pasta <strong>assets/posts</strong> no GitHub.</li>
+              <li>Abra <strong>data/posts.json</strong> e adicione um novo item na lista.</li>
+              <li>Salve o commit. O GitHub Pages atualiza o site sozinho depois do deploy.</li>
+            </ol>
+            <p class="manual-note">
+              Assim as imagens ficam no repositorio e aparecem para todo mundo que acessar o site.
+            </p>
           </div>
-        </form>
+        </div>
       </section>
 
       <section class="gallery-section" id="galeria" aria-labelledby="galeria-titulo">
@@ -83,7 +70,7 @@
 
         <div class="gallery-grid" id="galleryGrid"></div>
         <p class="empty-state" id="emptyState">
-          Nenhuma imagem postada ainda. Seja o primeiro a eternizar a resenha.
+          Nenhuma imagem cadastrada ainda. Adicione imagens pelo GitHub para eternizar a resenha.
         </p>
       </section>
     </main>
